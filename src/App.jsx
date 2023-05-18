@@ -1,4 +1,5 @@
 import "./App.css";
+import AddTodo from "./components/AddTodo";
 import TodoCounter from "./components/TodoCounter";
 import TodoItem from "./components/TodoItem";
 import TodoList from "./components/TodoList";
@@ -16,6 +17,8 @@ function App() {
         <TodoItem />
         <TodoItem />
       </TodoList>
+
+      <AddTodo />
     </div>
   );
 }

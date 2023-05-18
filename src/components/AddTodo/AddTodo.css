@@ -1,0 +1,25 @@
+.add-todo {
+  position: fixed;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  border: none;
+  border-radius: 50%;
+
+  background: #3b5bdb;
+  padding: 2rem;
+  display: grid;
+  box-shadow: 0 0 10px 1px rgba(52, 58, 64, 0.35);
+  cursor: pointer;
+
+  transition: all 0.3s ease-out;
+}
+
+.add-todo:hover {
+  transform: scale(1.05) rotate(90deg);
+}
+
+.icon.icon--add {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #fff;
+}
