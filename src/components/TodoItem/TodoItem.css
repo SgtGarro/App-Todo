@@ -1,0 +1,36 @@
+.todo-item {
+  box-shadow: 0 0 15px 4px rgba(52, 58, 64, 0.15);
+  border-radius: 16px;
+  padding: 1.2rem 1.6rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.todo-item-text {
+  font-size: 1.4rem;
+  width: 100%;
+}
+.icon-box--check {
+  padding: 0.4rem;
+  display: grid;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.icon-box--check:hover {
+  background: #0ca678;
+}
+.icon-box--check:hover .icon--check {
+  fill: #fff;
+}
+.icon--check,
+.icon--delete {
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.3s ease-out;
+}
+.icon--delete:hover {
+  fill: #e03131;
+  transform: scale(1.1);
+}
