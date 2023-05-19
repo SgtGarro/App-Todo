@@ -8,14 +8,21 @@ import { TodoContext } from "../context/TodoContext";
 import "./App.css";
 
 function App() {
-  const { searchedTodos } = React.useContext(TodoContext);
+  const { searchedTodos, deleteTodo, toggleTodo } =
+    React.useContext(TodoContext);
   return (
     <div className="app-container">
       <TodoCounter />
       <TodoSearch />
       <TodoList>
         {searchedTodos.map((todo) => (
-          <TodoItem key={todo.task} task={todo.task}></TodoItem>
+          <TodoItem
+            key={todo.task}
+            task={todo.task}
+            completed={todo.completed}
+            onDelete={() => deleteTodo(todo.task)}
+            onToggle={() => toggleTodo(todo.task)}
+          ></TodoItem>
         ))}
       </TodoList>
 

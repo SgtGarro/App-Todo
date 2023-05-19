@@ -6,31 +6,36 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
+
+  position: relative;
 }
 .todo-item-text {
   font-size: 1.4rem;
   width: 100%;
 }
-.icon-box--check {
-  padding: 0.4rem;
-  display: grid;
-  border-radius: 50%;
-  transition: all 0.3s ease-out;
-}
-.icon-box--check:hover {
-  background: #0ca678;
-}
-.icon-box--check:hover .icon--check {
-  fill: #fff;
-}
+
 .icon--check,
 .icon--delete {
+  display: grid;
   cursor: pointer;
-  position: relative;
 
   transition: all 0.3s ease-out;
+  overflow: visible;
+}
+.icon--check:hover {
+  fill: #099268;
+  transform: scale(1.1);
 }
 .icon--delete:hover {
   fill: #e03131;
   transform: scale(1.1);
+}
+
+/* Task completed */
+.icon--check.active {
+  fill: #099268;
+}
+.todo-item-text--completed {
+  color: #099268;
+  text-decoration: line-through;
 }
