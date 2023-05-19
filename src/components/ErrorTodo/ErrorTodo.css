@@ -1,0 +1,26 @@
+.error-todo {
+  text-align: center;
+}
+.error-todo-text {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+.error-todo-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin-bottom: 3.2rem;
+  background: #e03131;
+  border: none;
+  border-radius: 8px;
+
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+}
+.error-todo-warning {
+  font-size: 1.4rem;
+  color: #fa5252;
+}

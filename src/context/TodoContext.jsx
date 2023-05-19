@@ -5,7 +5,13 @@ import useLocaleStorage from "../hooks/useLocaleStorage";
 const TodoContext = React.createContext();
 
 function TodoProvider({ children }) {
-  const { item: todos, saveItem: setTodos } = useLocaleStorage("TODOS_V1", []);
+  const {
+    item: todos,
+    saveItem: setTodos,
+    deleteItem: deleteStorage,
+    loading,
+    error,
+  } = useLocaleStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
 
   const searchedTodos = todos.filter((todo) => {
@@ -40,8 +46,11 @@ function TodoProvider({ children }) {
         searchValue,
         setSearchValue,
         searchedTodos,
-        completedTodos,
         totalTodos,
+        completedTodos,
+        loading,
+        error,
+        deleteStorage,
       }}
     >
       {children}

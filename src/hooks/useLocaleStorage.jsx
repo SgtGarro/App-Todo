@@ -24,7 +24,7 @@ function useLocaleStorage(itemName, initialValue) {
       } catch (err) {
         setError(true);
       }
-    }, 2000);
+    }, 3000);
   });
 
   const saveItem = function (newItem) {
@@ -32,7 +32,12 @@ function useLocaleStorage(itemName, initialValue) {
     setItem(newItem);
   };
 
-  return { item, saveItem, loading, error };
+  const deleteItem = function () {
+    localStorage.removeItem(itemName);
+    setItem(initialValue);
+  };
+
+  return { item, saveItem, deleteItem, loading, error };
 }
 
 export default useLocaleStorage;
