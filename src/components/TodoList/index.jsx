@@ -8,5 +8,5 @@ function TodoList({ children }) {
 export default TodoList;
 
 TodoList.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.array,
 };
