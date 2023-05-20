@@ -2,7 +2,9 @@ import React from "react";
 import AddTodo from "../components/AddTodo";
 import EmptyTodo from "../components/EmptyTodo";
 import ErrorTodo from "../components/ErrorTodo";
+import FormTodo from "../components/FormTodo";
 import LoadingItem from "../components/LoadingItem";
+import Modal from "../components/Modal";
 import TodoCounter from "../components/TodoCounter";
 import TodoItem from "../components/TodoItem";
 import TodoList from "../components/TodoList";
@@ -11,8 +13,15 @@ import { TodoContext } from "../context/TodoContext";
 import "./App.css";
 
 function App() {
-  const { searchedTodos, deleteTodo, toggleTodo, loading, error, totalTodos } =
-    React.useContext(TodoContext);
+  const {
+    searchedTodos,
+    deleteTodo,
+    toggleTodo,
+    loading,
+    error,
+    totalTodos,
+    openModal,
+  } = React.useContext(TodoContext);
   return (
     <div className="app-container">
       <TodoCounter />
@@ -36,6 +45,12 @@ function App() {
       </TodoList>
 
       <AddTodo />
+
+      {openModal && (
+        <Modal>
+          <FormTodo />
+        </Modal>
+      )}
     </div>
   );
 }
