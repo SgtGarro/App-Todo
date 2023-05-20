@@ -2,3 +2,13 @@
   font-size: 1.6rem;
   text-align: center;
 }
+@media (min-width: 36em) {
+  .empty-todo {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 48em) {
+  .empty-todo {
+    font-size: 2rem;
+  }
+}

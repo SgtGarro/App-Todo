@@ -24,3 +24,24 @@
   font-size: 1.4rem;
   color: #fa5252;
 }
+@media (min-width: 36em) {
+  .error-todo-text {
+    margin-bottom: 2rem;
+  }
+  .error-todo-text,
+  .error-todo-btn {
+    font-size: 1.8rem;
+  }
+  .error-todo-warning {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 48em) {
+  .error-todo-text,
+  .error-todo-btn {
+    font-size: 2rem;
+  }
+  .error-todo-warning {
+    font-size: 1.8rem;
+  }
+}

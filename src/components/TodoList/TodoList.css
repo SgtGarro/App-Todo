@@ -3,3 +3,14 @@
   flex-direction: column;
   gap: 2.4rem;
 }
+
+@media (min-width: 36em) {
+  .todo-list {
+    gap: 2.8rem;
+  }
+}
+@media (min-width: 48em) {
+  .todo-list {
+    gap: 3.2rem;
+  }
+}

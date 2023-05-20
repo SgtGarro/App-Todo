@@ -24,3 +24,31 @@
   height: 3.2rem;
   color: #fff;
 }
+
+@media (min-width: 36em) {
+  .add-todo {
+    bottom: 3.2rem;
+    right: 3.2rem;
+  }
+  .icon.icon--add {
+    width: 4rem;
+    height: 4rem;
+  }
+  .add-todo {
+    padding: 2.4rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .add-todo {
+    bottom: 4rem;
+    right: 4rem;
+  }
+  .icon.icon--add {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .add-todo {
+    padding: 2.8rem;
+  }
+}

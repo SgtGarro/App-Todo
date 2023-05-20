@@ -35,6 +35,7 @@ function useLocaleStorage(itemName, initialValue) {
   const deleteItem = function () {
     localStorage.removeItem(itemName);
     setItem(initialValue);
+    setError(false);
   };
 
   return { item, saveItem, deleteItem, loading, error };

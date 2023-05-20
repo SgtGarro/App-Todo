@@ -28,7 +28,9 @@ function App() {
       <TodoSearch />
       <TodoList>
         {error && <ErrorTodo />}
-        {loading && [...Array(8)].map((_, i) => <LoadingItem key={i} />)}
+        {loading &&
+          !error &&
+          [...Array(8)].map((_, i) => <LoadingItem key={i} />)}
         {!loading && searchedTodos.length <= 0 && (
           <EmptyTodo isSearched={Boolean(totalTodos)} />
         )}

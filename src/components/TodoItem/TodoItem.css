@@ -37,3 +37,26 @@
   color: #099268;
   text-decoration: line-through;
 }
+
+@media (min-width: 36em) {
+  .todo-item {
+    padding: 1.6rem 2rem;
+  }
+  .todo-item-text {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 48em) {
+  .todo-item {
+    gap: 2.4rem;
+    padding: 2rem 2.4rem;
+  }
+  .todo-item-text {
+    font-size: 2rem;
+  }
+  .icon.icon--check,
+  .icon.icon--delete {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
